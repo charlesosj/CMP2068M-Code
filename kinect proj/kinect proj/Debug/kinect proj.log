@@ -1,0 +1,16 @@
+﻿Build started 13/02/2014 21:50:33.
+     1>Project "C:\Users\Charles\Dropbox\randomc++\Kinect\kinect proj\kinect proj\kinect proj.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files\OpenNI2\Include" /I"C:\Program Files\Microsoft SDKs\Kinect\v1.7\inc" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "kinect proj.cpp"
+         kinect proj.cpp
+     1>c:\users\charles\dropbox\randomc++\kinect\kinect proj\kinect proj\kinect proj.cpp(41): warning C4244: '=' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\charles\dropbox\randomc++\kinect\kinect proj\kinect proj\kinect proj.cpp(42): warning C4244: '=' : conversion from 'FLOAT' to 'int', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Charles\Dropbox\randomc++\Kinect\kinect proj\Debug\kinect proj.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\Microsoft SDKs\Kinect\v1.7\lib\x86" "C:\Program Files\Microsoft SDKs\Kinect\v1.7\lib\x86\Kinect10.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Charles\Dropbox\randomc++\Kinect\kinect proj\Debug\kinect proj.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Charles\Dropbox\randomc++\Kinect\kinect proj\Debug\kinect proj.lib" /MACHINE:X86 "Debug\kinect proj.obj"
+         Debug\stdafx.obj
+         kinect proj.vcxproj -> C:\Users\Charles\Dropbox\randomc++\Kinect\kinect proj\Debug\kinect proj.exe
+     1>Done Building Project "C:\Users\Charles\Dropbox\randomc++\Kinect\kinect proj\kinect proj\kinect proj.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.82
