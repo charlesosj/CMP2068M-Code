@@ -7,6 +7,12 @@
 using namespace std;
 int main()
 {
+	cout << "start" <<endl ;
+
+	for (;;)
+	{
+		
+	}
 	//initialize variables
 	int first =1;
 	int centerX =0,centerY = 0 ;
