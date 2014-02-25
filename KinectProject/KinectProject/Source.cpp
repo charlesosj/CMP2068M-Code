@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 
 	int first =1;
 	int centerX =0,centerY = 0 ;
+	int prevx =0, prevy= 0;
 	//holds x and y of cursoR
 	POINT cursorLoc ;
 
@@ -51,9 +52,9 @@ int main(int argc, char *argv[])
 					double x = ourframe.SkeletonData[i].SkeletonPositions[NUI_SKELETON_POSITION_HEAD].x *1000 ;
 					double y =ourframe.SkeletonData[i].SkeletonPositions[NUI_SKELETON_POSITION_HEAD].y *1000;
 
-					//cout <<"x ="<<x << "     " << "y" <<y  <<endl;
+				//	cout <<"x ="<<x << "     " << "y" <<y  <<endl;
 
-					cout << ourframe.SkeletonData[i].SkeletonPositions[NUI_SKELETON_POSITION_HEAD].w <<endl;
+				
 					//get mouse position
 					GetCursorPos(&cursorLoc);
 					ShowCursor(0) ;
@@ -61,30 +62,55 @@ int main(int argc, char *argv[])
 
 					// this is were we move the mouse based on the changes of the kinect we need to tweak
 
-					if (x > centerX  )
+					int difx= x -prevx ;
+					int dify= y -prevy ;
+
+					if (difx >3  || difx < -3)
 					{
-						cursorLoc.x ++;
+						cursorLoc.x = cursorLoc.x + (difx*1.5);
 						SetCursorPos(cursorLoc.x,cursorLoc.y);
 					}
-					if (x <centerX)
+			/*		if (difx >50)
 					{
-						cursorLoc.x --;
+						cursorLoc.x = cursorLoc.x + 5;
 						SetCursorPos(cursorLoc.x,cursorLoc.y);
 					}
+					if (difx <-50)
+					{
+						cursorLoc.x = cursorLoc.x - 5;
+						SetCursorPos(cursorLoc.x,cursorLoc.y);
+					}*/
 
 
-					//y
-					if (y >centerY)
-					{
-						cursorLoc.y --;
-						SetCursorPos(cursorLoc.x,cursorLoc.y);
-					}
-					if (y <centerY)
-					{
-						cursorLoc.y ++;
-						SetCursorPos(cursorLoc.x,cursorLoc.y);
+					cout <<"x ="<<difx << "     " << "y" <<dify  <<endl;
 
-					}
+					//if (x > centerX  )
+					//{
+					//	cursorLoc.x ++;
+					//	SetCursorPos(cursorLoc.x,cursorLoc.y);
+					//}
+					//if (x <centerX)
+					//{
+					//	cursorLoc.x --;
+					//	SetCursorPos(cursorLoc.x,cursorLoc.y);
+					//}
+
+
+					////y
+					//if (y >centerY)
+					//{
+					//	cursorLoc.y --;
+					//	SetCursorPos(cursorLoc.x,cursorLoc.y);
+					//}
+					//if (y <centerY)
+					//{
+					//	cursorLoc.y ++;
+					//	SetCursorPos(cursorLoc.x,cursorLoc.y);
+
+					//}
+
+					prevx = x;
+					prevy= y;
 
 				}
 					
