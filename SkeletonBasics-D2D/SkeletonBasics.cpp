@@ -8,7 +8,8 @@ static const float g_JointThickness = 3.0f;
 static const float g_TrackedBoneThickness = 6.0f;
 static const float g_InferredBoneThickness = 1.0f;
 int centerX =0,centerY =0,count =0;
-void Movemouse( int x, int y);
+int leftshoulderY =0, rightshoulderY =0;
+void Movemouse( int x, int y,int Rsy,int Lsy);
 /// <summary>
 /// Entry point for the application
 /// </summary>
@@ -339,15 +340,20 @@ void CSkeletonBasics::ProcessSkeleton()
 
 			int x =  skeletonFrame.SkeletonData[i].SkeletonPositions[NUI_SKELETON_POSITION_HEAD].x *1000 ;
 			int y=skeletonFrame.SkeletonData[i].SkeletonPositions[NUI_SKELETON_POSITION_HEAD].y *1000 ;
+			int Lsy =skeletonFrame.SkeletonData[i].SkeletonPositions[NUI_SKELETON_POSITION_SHOULDER_LEFT].y *1000;
+			int Rsy =skeletonFrame.SkeletonData[i].SkeletonPositions[NUI_SKELETON_POSITION_SHOULDER_RIGHT].y *1000;
 			if (count <50)
 			{
 				centerX =x;
 				centerY=y;
+				leftshoulderY =Lsy;
+				rightshoulderY = Rsy;
 				count++;
+
 			}
 			else
 			{
-				Movemouse(x,y); 
+				Movemouse(x,y,Rsy,Lsy); 
 
 			}
 
@@ -558,7 +564,7 @@ void CSkeletonBasics::SetStatusMessage(WCHAR * szMessage)
 	SendDlgItemMessageW(m_hWnd, IDC_STATUS, WM_SETTEXT, 0, (LPARAM)szMessage);
 }
 
-void Movemouse( int x, int y)
+void Movemouse( int x, int y,int Rsy,int Lsy)
 {
 	POINT cursorLoc ;
 	//get mouse position
@@ -567,37 +573,58 @@ void Movemouse( int x, int y)
 
 
 	// this is were we move the mouse based on the changes of the kinect we need to tweak
-
+	int speed = 2;
 	int difx= x -centerX ;
 	int dify= y -centerY ;
 	if (difx >10 )
 	{
-		cursorLoc.x = cursorLoc.x + 1;
-		//SetCursorPos(cursorLoc.x,cursorLoc.y);
+		cursorLoc.x = cursorLoc.x + speed;
 
 	}
 
 	if (difx < -10)
 	{
-		cursorLoc.x = cursorLoc.x -1;
-		//SetCursorPos(cursorLoc.x,cursorLoc.y);
+		cursorLoc.x = cursorLoc.x -speed;
 	}
 
 
-	if (dify >15 )
+	if (dify >3 )
 	{
-		cursorLoc.y = cursorLoc.y - 1;
-		//SetCursorPos(cursorLoc.x,cursorLoc.y);
+		cursorLoc.y = cursorLoc.y - speed;
 
 	}
 
 	if (dify < -15)
 	{
-		cursorLoc.y = cursorLoc.y +1;
-		//SetCursorPos(cursorLoc.x,cursorLoc.y);
+		cursorLoc.y = cursorLoc.y +speed;
 	}
 	SetCursorPos(cursorLoc.x,cursorLoc.y);
 
 
+	//clicking
+
+	int diffRs = Rsy -rightshoulderY;
+	int diffLs = Lsy -leftshoulderY;
+	bool click = false;
+	if (diffLs >10)
+	{
+		mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+		click = true;
+	}
+
+	if (diffRs >10)
+	{
+		mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP , 0, 0, 0, 0);
+		click= true;
+
+	}
+
+	if (click == true)
+	{
+		click = false;
+		Sleep(1000);
+
+
+	}
 
 }

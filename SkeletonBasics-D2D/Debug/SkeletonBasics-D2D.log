@@ -1,16 +1,18 @@
-﻿Build started 28/02/2014 12:15:50.
-     1>Project "C:\Users\Charles\Documents\SkeletonBasics-D2D\SkeletonBasics-D2D.vcxproj" on node 2 (Build target(s)).
+﻿Build started 28/02/2014 17:07:39.
+     1>Project "C:\Users\Charles\Dropbox\GitHub\GroupProject\CMP2068M-Code\SkeletonBasics-D2D\SkeletonBasics-D2D.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt SkeletonBasics.cpp
          SkeletonBasics.cpp
-     1>c:\users\charles\documents\skeletonbasics-d2d\skeletonbasics.cpp(340): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
-     1>c:\users\charles\documents\skeletonbasics-d2d\skeletonbasics.cpp(341): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\charles\dropbox\github\groupproject\cmp2068m-code\skeletonbasics-d2d\skeletonbasics.cpp(341): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\charles\dropbox\github\groupproject\cmp2068m-code\skeletonbasics-d2d\skeletonbasics.cpp(342): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\charles\dropbox\github\groupproject\cmp2068m-code\skeletonbasics-d2d\skeletonbasics.cpp(343): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\charles\dropbox\github\groupproject\cmp2068m-code\skeletonbasics-d2d\skeletonbasics.cpp(344): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Charles\Documents\SkeletonBasics-D2D\Debug\SkeletonBasics-D2D.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Kinect10.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Charles\Documents\SkeletonBasics-D2D\Debug\SkeletonBasics-D2D.pdb" /SUBSYSTEM:WINDOWS /STACK:"10000000","10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Charles\Documents\SkeletonBasics-D2D\Debug\SkeletonBasics-D2D.lib" /MACHINE:X86 Debug\SkeletonBasics.res
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Charles\Dropbox\GitHub\GroupProject\CMP2068M-Code\SkeletonBasics-D2D\Debug\SkeletonBasics-D2D.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Kinect10.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Charles\Dropbox\GitHub\GroupProject\CMP2068M-Code\SkeletonBasics-D2D\Debug\SkeletonBasics-D2D.pdb" /SUBSYSTEM:WINDOWS /STACK:"10000000","10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Charles\Dropbox\GitHub\GroupProject\CMP2068M-Code\SkeletonBasics-D2D\Debug\SkeletonBasics-D2D.lib" /MACHINE:X86 Debug\SkeletonBasics.res
          Debug\SkeletonBasics.obj
-         SkeletonBasics-D2D.vcxproj -> C:\Users\Charles\Documents\SkeletonBasics-D2D\Debug\SkeletonBasics-D2D.exe
-     1>Done Building Project "C:\Users\Charles\Documents\SkeletonBasics-D2D\SkeletonBasics-D2D.vcxproj" (Build target(s)).
+         SkeletonBasics-D2D.vcxproj -> C:\Users\Charles\Dropbox\GitHub\GroupProject\CMP2068M-Code\SkeletonBasics-D2D\Debug\SkeletonBasics-D2D.exe
+     1>Done Building Project "C:\Users\Charles\Dropbox\GitHub\GroupProject\CMP2068M-Code\SkeletonBasics-D2D\SkeletonBasics-D2D.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.91
+Time Elapsed 00:00:01.83
