@@ -22,6 +22,7 @@ int screenX = 0, screenY = 0;
 int centerX = 0, centerY = 0, count = 0;
 int leftshoulderY = 0, rightshoulderY = 0;
 void Movemouse(int x, int y, int Rsy, int Lsy);
+void enterkey(char keyinput);
 LPCWSTR CSkeletonBasics::GrammarFileName = L"SpeechBasics-D2D.grxml";
 // This is the class ID we expect for the Microsoft Speech recognizer.
 // Other values indicate that we're using a version of sapi.h that is
@@ -838,11 +839,35 @@ ProgramActions CSkeletonBasics::MapSpeechTagToAction(LPCWSTR pszSpeechTag)
 	{
 		{ L"CLICK", LeftClick },
 		{ L"RIGHTCLICK", RightClick },
-		{ L"CENTER", Center },
-		{ L"TOPRIGHT", TopRight },
-		{ L"TOPLEFT", Topleft },
-		{ L"BOTTOMLEFT", BottomLeft },
-		{ L"BOTTOMRIGHT", BottomRight },
+		{ L"A", A },
+		{ L"B", B },
+		{ L"C", C },
+		{ L"D", D },
+		{ L"E", E },
+		{ L"F", F },
+		{ L"G", G },
+		{ L"H", H },
+		{ L"I", I },
+		{ L"J", J },
+		{ L"K", K },
+		{ L"L", L },
+		{ L"M", M },
+		{ L"N", N },
+		{ L"O", O },
+		{ L"P", P },
+		{ L"Q", Q },
+		{ L"R", R },
+		{ L"S", S },
+		{ L"T", T },
+		{ L"U", U },
+		{ L"V", V },
+		{ L"W", W },
+		{ L"X", X },
+		{ L"Y", Y },
+		{ L"Z", Z },
+	
+
+		
 
 	};
 
@@ -862,21 +887,8 @@ ProgramActions CSkeletonBasics::MapSpeechTagToAction(LPCWSTR pszSpeechTag)
 
 void CSkeletonBasics::DoAction(ProgramActions action)
 {
-	// different actions goes here
 	switch (action)
 	{
-	case Topleft:
-
-		break;
-	case TopRight:
-
-		break;
-	case BottomLeft:
-
-		break;
-	case BottomRight:
-
-		break;
 	case RightClick:
 		mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
 		SetStatusMessage(L"Right Clicking");
@@ -885,9 +897,116 @@ void CSkeletonBasics::DoAction(ProgramActions action)
 		mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 		SetStatusMessage(L"Left Clicking");
 		break;
+	case A:
+		SetStatusMessage(L"A");
+		enterkey(97);
+		break;
+	case B:
+		SetStatusMessage(L"B");
+		enterkey(98);
+		break;
+	case C:
+		SetStatusMessage(L"C");
+		enterkey(99);
+		break;
+	case D:
+		SetStatusMessage(L"D");
+		enterkey(100);
+		break;
+	case E:
+		SetStatusMessage(L"E");
+		enterkey(101);
+		break;
+	case F:
+		SetStatusMessage(L"F");
+		enterkey(102);
+		break;
+	case G:
+		SetStatusMessage(L"G");
+		enterkey(103);
+		break;
+	case H:
+		SetStatusMessage(L"H");
+		enterkey(104);
+		break;
+	case I:
+		SetStatusMessage(L"I");
+		enterkey(105);
+		break;
+	case J:
+		SetStatusMessage(L"J");
+		enterkey(106);
+		break;
+	case K:
+		SetStatusMessage(L"K");
+		enterkey(107);
+		break;
+	case L:
+		SetStatusMessage(L"L");
+		enterkey(108);
+		break;
+	case M:
+		SetStatusMessage(L"M");
+		enterkey(109);
+		break;
+	case N:
+		SetStatusMessage(L"N");
+		enterkey(110);
+		break;
+	case O:
+		SetStatusMessage(L"O");
+		enterkey(111);
+		break;
+	case P:
+		SetStatusMessage(L"P");
+		enterkey(112);
+		break;
+	case Q:
+		SetStatusMessage(L"N");
+		enterkey(113);
+		break;
+	case R:
+		SetStatusMessage(L"R");
+		enterkey(114);
+		break;
+	case S:
+		SetStatusMessage(L"S");
+		enterkey(115);
+		break;
+	case T:
+		SetStatusMessage(L"T");
+		enterkey(116);
+		break;
+	case U:
+		SetStatusMessage(L"U");
+		enterkey(117);
+		break;
+	case V:
+		SetStatusMessage(L"V");
+		enterkey(118);
+		break;
+	case W:
+		SetStatusMessage(L"W");
+		enterkey(119);
+		break;
+	case X:
+		SetStatusMessage(L"X");
+		enterkey(120);
+		break;
+	case Y:
+		SetStatusMessage(L"Y");
+		enterkey(121);
+		break;
+	case Z:
+		SetStatusMessage(L"Z");
+		enterkey(122);
+		break;
 	case NoAction:
 		break;
+	default:
+		break;
 	}
+	// different actions goes here
 
 }
 void CSkeletonBasics::SetStatusMessage(WCHAR * szMessage)
@@ -932,3 +1051,20 @@ void Movemouse(int x, int y, int Rsy, int Lsy)
 	SetCursorPos(cursorLoc.x, cursorLoc.y);
 
 }
+
+void enterkey(char keyinput){
+	INPUT input; // INPUT structure
+	memset(&input, 0, sizeof(input));
+
+	input.type = INPUT_KEYBOARD;
+
+	input.ki.wVk = VkKeyScanA(keyinput);
+
+	//  Sleep(1000);
+
+	SendInput(1, &input, sizeof(INPUT)); 
+	input.ki.dwFlags = KEYEVENTF_KEYUP;
+
+	SendInput(1, &input, sizeof(INPUT));
+
+}

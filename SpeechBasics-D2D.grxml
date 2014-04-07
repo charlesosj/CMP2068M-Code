@@ -9,6 +9,10 @@
           <item> straight </item>
         </one-of>
       </item>
+
+	   <item> <tag>A</tag> <one-of><item> A </item><item> letter a </item></one-of></item>
+	  
+	  
       <item>
         <tag>BACKWARD</tag>
         <one-of>

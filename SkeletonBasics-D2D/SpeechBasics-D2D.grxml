@@ -2,22 +2,6 @@
   <rule id="rootRule">
     <one-of>
       <item>
-        <tag>FORWARD</tag>
-        <one-of>
-          <item> forwards </item>
-          <item> forward </item>
-          <item> straight </item>
-        </one-of>
-      </item>
-      <item>
-        <tag>BACKWARD</tag>
-        <one-of>
-          <item> backward </item>
-          <item> backwards </item>
-          <item> back </item>
-        </one-of>
-      </item>
-      <item>
         <tag>CLICK</tag>
         <one-of>
           <item> Left click </item>
@@ -25,6 +9,36 @@
 		  <item> click </item>
         </one-of>
       </item>
+	  <item> <tag>A</tag> <one-of><item> Al-fah </item><item> yay </item><item> ay </item><item> hey </item><item> ey </item><item> ae </item><item> hay </item></one-of></item>
+	  <item> <tag>B</tag> <one-of><item> be </item><item> bee </item></one-of></item>
+	  <item> <tag>C</tag> <one-of><item> see </item><item> sea </item></one-of></item>
+	  <item> <tag>D</tag> <one-of><item> d </item><item> de </item><item> thee </item><item> deer </item><item> dear </item></one-of></item>
+	  <item> <tag>E</tag> <one-of><item> ee </item><item> eee </item><item> eh </item></one-of></item>
+	  <item> <tag>F</tag> <one-of><item> ef </item><item> eff </item><item> f </item></one-of></item>
+	  <item> <tag>G</tag> <one-of><item> gee </item><item> ge </item></one-of></item>
+	  <item> <tag>H</tag> <one-of><item> edge </item><item> hedge </item><item> hatch </item><item> itch </item></one-of></item>
+	  <item> <tag>I</tag> <one-of><item> aye </item><item> eye </item><item> i </item></one-of></item>
+	  <item> <tag>J</tag> <one-of><item> je </item><item> jay </item><item> joy </item></one-of></item>
+	  <item> <tag>K</tag> <one-of><item> kay </item><item> ke </item></one-of></item>
+	  <item> <tag>L</tag> <one-of><item> el </item><item> yell </item><item> hell </item></one-of></item>
+	  <item> <tag>M</tag> <one-of><item> am </item><item> yam </item><item> em </item></one-of></item>
+	  <item> <tag>N</tag> <one-of><item> yen </item><item> en </item></one-of></item>
+	  <item> <tag>O</tag> <one-of><item> oh </item><item> vow </item><item> waw </item></one-of></item>
+	  <item> <tag>P</tag> <one-of><item> pee </item><item> fffffff </item><item> pie </item></one-of></item>
+	  <item> <tag>Q</tag> <one-of><item> que </item><item> cue </item><item> queue </item></one-of></item>
+	  <item> <tag>R</tag> <one-of><item> are </item><item> err </item><item> r </item></one-of></item>
+	  <item> <tag>S</tag> <one-of><item> yes </item><item> ass </item><item> s </item></one-of></item>
+	  <item> <tag>T</tag> <one-of><item> tea </item><item> tee </item></one-of></item>
+	  <item> <tag>U</tag> <one-of><item> you </item><item> u </item></one-of></item>
+	  <item> <tag>V</tag> <one-of><item> we </item><item> wee </item><item> vee </item><item> ve </item><item> v </item></one-of></item>
+	  <item> <tag>W</tag> <one-of><item> double you </item></one-of></item>
+	  <item> <tag>X</tag> <one-of><item> axe </item><item> ex </item></one-of></item>
+	  <item> <tag>Y</tag> <one-of><item> why </item><item> y </item></one-of></item>
+	  <item> <tag>Z</tag> <one-of><item> zed </item><item> zee </item><item> jed </item></one-of></item>
+	 
+	  <item> <tag>Space</tag> <one-of><item> space </item></one-of></item>
+
+	  
 	  <item>
         <tag>RIGHTCLICK</tag>
         <one-of>
@@ -32,18 +46,6 @@
 		  <item> right clicks </item>
         </one-of>
       </item>	  
-      <item>
-        <tag>LEFT</tag>
-        <one-of>
-          <item> turn left </item>
-        </one-of>
-      </item>
-      <item>
-        <tag>RIGHT</tag>
-        <one-of>
-          <item> turn right </item>
-        </one-of>
-      </item>
     </one-of>
   </rule>
 </grammar>
