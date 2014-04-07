@@ -9,34 +9,50 @@
 		  <item> click </item>
         </one-of>
       </item>
-	  <item> <tag>A</tag> <one-of><item> Al-fah </item><item> yay </item><item> ay </item><item> hey </item><item> ey </item><item> ae </item><item> hay </item></one-of></item>
-	  <item> <tag>B</tag> <one-of><item> be </item><item> bee </item></one-of></item>
-	  <item> <tag>C</tag> <one-of><item> see </item><item> sea </item></one-of></item>
-	  <item> <tag>D</tag> <one-of><item> d </item><item> de </item><item> thee </item><item> deer </item><item> dear </item></one-of></item>
-	  <item> <tag>E</tag> <one-of><item> ee </item><item> eee </item><item> eh </item></one-of></item>
-	  <item> <tag>F</tag> <one-of><item> ef </item><item> eff </item><item> f </item></one-of></item>
-	  <item> <tag>G</tag> <one-of><item> gee </item><item> ge </item></one-of></item>
-	  <item> <tag>H</tag> <one-of><item> edge </item><item> hedge </item><item> hatch </item><item> itch </item></one-of></item>
-	  <item> <tag>I</tag> <one-of><item> aye </item><item> eye </item><item> i </item></one-of></item>
-	  <item> <tag>J</tag> <one-of><item> je </item><item> jay </item><item> joy </item></one-of></item>
-	  <item> <tag>K</tag> <one-of><item> kay </item><item> ke </item></one-of></item>
-	  <item> <tag>L</tag> <one-of><item> el </item><item> yell </item><item> hell </item></one-of></item>
-	  <item> <tag>M</tag> <one-of><item> am </item><item> yam </item><item> em </item></one-of></item>
-	  <item> <tag>N</tag> <one-of><item> yen </item><item> en </item></one-of></item>
-	  <item> <tag>O</tag> <one-of><item> oh </item><item> vow </item><item> waw </item></one-of></item>
-	  <item> <tag>P</tag> <one-of><item> pee </item><item> fffffff </item><item> pie </item></one-of></item>
-	  <item> <tag>Q</tag> <one-of><item> que </item><item> cue </item><item> queue </item></one-of></item>
-	  <item> <tag>R</tag> <one-of><item> are </item><item> err </item><item> r </item></one-of></item>
-	  <item> <tag>S</tag> <one-of><item> yes </item><item> ass </item><item> s </item></one-of></item>
-	  <item> <tag>T</tag> <one-of><item> tea </item><item> tee </item></one-of></item>
-	  <item> <tag>U</tag> <one-of><item> you </item><item> u </item></one-of></item>
-	  <item> <tag>V</tag> <one-of><item> we </item><item> wee </item><item> vee </item><item> ve </item><item> v </item></one-of></item>
-	  <item> <tag>W</tag> <one-of><item> double you </item></one-of></item>
-	  <item> <tag>X</tag> <one-of><item> axe </item><item> ex </item></one-of></item>
-	  <item> <tag>Y</tag> <one-of><item> why </item><item> y </item></one-of></item>
-	  <item> <tag>Z</tag> <one-of><item> zed </item><item> zee </item><item> jed </item></one-of></item>
+	  <item> <tag>A</tag> <one-of><item> Alfah </item></one-of></item>
+	  <item> <tag>B</tag> <one-of><item> Brahvoh </item></one-of></item>
+	  <item> <tag>C</tag> <one-of><item> charlee </item></one-of></item>
+	  <item> <tag>D</tag> <one-of><item> delltah </item></one-of></item>
+	  <item> <tag>E</tag> <one-of><item> eckoh </item></one-of></item>
+	  <item> <tag>F</tag> <one-of><item> fokstrot </item></one-of></item>
+	  <item> <tag>G</tag> <one-of><item> golf </item></one-of></item>
+	  <item> <tag>H</tag> <one-of><item> hohtel </item></one-of></item>
+	  <item> <tag>I</tag> <one-of><item> indeeah </item></one-of></item>
+	  <item> <tag>J</tag> <one-of><item> jewleeett </item></one-of></item>
+	  <item> <tag>K</tag> <one-of><item> keyloh </item></one-of></item>
+	  <item> <tag>L</tag> <one-of><item> leemah </item></one-of></item>
+	  <item> <tag>M</tag> <one-of><item> mike </item></one-of></item>
+	  <item> <tag>N</tag> <one-of><item> november </item></one-of></item>
+	  <item> <tag>O</tag> <one-of><item> osscah </item></one-of></item>
+	  <item> <tag>P</tag> <one-of><item> pahpah </item></one-of></item>
+	  <item> <tag>Q</tag> <one-of><item> kehbeck </item></one-of></item>
+	  <item> <tag>R</tag> <one-of><item> rowmeoh </item></one-of></item>
+	  <item> <tag>S</tag> <one-of><item> seeairrah </item></one-of></item>
+	  <item> <tag>T</tag> <one-of><item> tanggo </item></one-of></item>
+	  <item> <tag>U</tag> <one-of><item> youneeform </item></one-of></item>
+	  <item> <tag>V</tag> <one-of><item> viktah </item></one-of></item>
+	  <item> <tag>W</tag> <one-of><item> wisskey </item></one-of></item>
+	  <item> <tag>X</tag> <one-of><item> ecksray </item></one-of></item>
+	  <item> <tag>Y</tag> <one-of><item> yangkey </item></one-of></item>
+	  <item> <tag>Z</tag> <one-of><item> zooloo </item></one-of></item>
 	 
-	  <item> <tag>Space</tag> <one-of><item> space </item></one-of></item>
+	  <item> <tag>1</tag> <one-of><item> wun </item></one-of></item>
+	  <item> <tag>2</tag> <one-of><item> too </item></one-of></item>
+	  <item> <tag>3</tag> <one-of><item> tree </item><item> three </item></one-of></item>
+	  <item> <tag>4</tag> <one-of><item> fower </item><item> four </item></one-of></item>
+	  <item> <tag>5</tag> <one-of><item> fife </item></one-of></item>
+	  <item> <tag>6</tag> <one-of><item> six </item></one-of></item>
+	  <item> <tag>7</tag> <one-of><item> seven </item></one-of></item>
+	  <item> <tag>8</tag> <one-of><item> ait </item><item> eight </item></one-of></item>
+	  <item> <tag>9</tag> <one-of><item> nine </item></one-of></item>
+	  <item> <tag>0</tag> <one-of><item> zeero </item></one-of></item>
+	 
+	 <item> <tag>SPACE</tag> <one-of><item> space </item></one-of></item>
+	 <item> <tag>ENTER</tag> <one-of><item> enter </item></one-of></item>
+	 
+	 <item> <tag>CALIBRATE</tag> <one-of><item> recalibrate </item><item> calibrate </item></one-of></item>
+	 <item> <tag>MOUSEUP</tag> <one-of><item> speed up </item><item> fast </item><item> faster </item><item> speed up mouse </item></one-of></item>
+	 <item> <tag>MOUSEDOWN</tag> <one-of><item> slow down </item><item> slow </item><item> slower </item><item> slow down mouse </item></one-of></item>
 
 	  
 	  <item>

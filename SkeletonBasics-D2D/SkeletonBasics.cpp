@@ -18,6 +18,7 @@
 static const float g_JointThickness = 3.0f;
 static const float g_TrackedBoneThickness = 6.0f;
 static const float g_InferredBoneThickness = 1.0f;
+int speed = 3;
 int screenX = 0, screenY = 0;
 int centerX = 0, centerY = 0, count = 0;
 int leftshoulderY = 0, rightshoulderY = 0;
@@ -368,7 +369,8 @@ HRESULT CSkeletonBasics::CreateFirstConnected()
 	m_hNextSkeletonEvent = CreateEventW(NULL, TRUE, FALSE, NULL);
 
 	// Open a skeleton stream to receive skeleton data
-	hr = m_pNuiSensor->NuiSkeletonTrackingEnable(m_hNextSkeletonEvent, 0);
+	//hr = m_pNuiSensor->NuiSkeletonTrackingEnable(m_hNextSkeletonEvent, 0);
+	m_pNuiSensor->NuiSkeletonTrackingEnable(m_hNextSkeletonEvent, true ? NUI_SKELETON_TRACKING_FLAG_ENABLE_SEATED_SUPPORT : 0);
 	return hr;
 }
 
@@ -424,10 +426,12 @@ void CSkeletonBasics::ProcessSkeleton()
 				leftshoulderY = Lsy;
 				rightshoulderY = Rsy;
 				count++;
+				SetStatusMessage(L" Calibrating Mouse, Stay still");
 
 			}
 			else
 			{
+				SetStatusMessage(L" Mouse Calibrated");
 				Movemouse(x, y, Rsy, Lsy);
 
 			}
@@ -865,9 +869,21 @@ ProgramActions CSkeletonBasics::MapSpeechTagToAction(LPCWSTR pszSpeechTag)
 		{ L"X", X },
 		{ L"Y", Y },
 		{ L"Z", Z },
-	
-
-		
+		{ L"1", one },
+		{ L"2", two },
+		{ L"3", three },
+		{ L"4", four },
+		{ L"5", five },
+		{ L"6", six },
+		{ L"7", seven },
+		{ L"8", eight },
+		{ L"9", nine },
+		{ L"0", zero },
+		{ L"ENTER", enter },
+		{ L"SPACE", space },
+		{ L"MOUSEUP", mouseup },
+		{ L"MOUSEDOWN", mousedown },
+		{ L"CALIBRATE", calibrate },
 
 	};
 
@@ -1001,12 +1017,76 @@ void CSkeletonBasics::DoAction(ProgramActions action)
 		SetStatusMessage(L"Z");
 		enterkey(122);
 		break;
+	case one:
+		SetStatusMessage(L"1");
+		enterkey(49);
+		break;
+	case two:
+		SetStatusMessage(L"2");
+		enterkey(50);
+		break;
+	case three:
+		SetStatusMessage(L"3");
+		enterkey(51);
+		break;
+	case four:
+		SetStatusMessage(L"4");
+		enterkey(52);
+		break;
+	case five:
+		SetStatusMessage(L"5");
+		enterkey(53);
+		break;
+	case six:
+		SetStatusMessage(L"6");
+		enterkey(54);
+		break;
+	case seven:
+		SetStatusMessage(L"7");
+		enterkey(55);
+		break;
+	case eight:
+		SetStatusMessage(L"8");
+		enterkey(56);
+		break;
+	case nine:
+		SetStatusMessage(L"9");
+		enterkey(57);
+		break;
+	case zero:
+		SetStatusMessage(L"0");
+		enterkey(48);
+		break;
+	case space:
+		SetStatusMessage(L"space");
+		enterkey(32);
+		break;
+	case enter:
+		SetStatusMessage(L"enter");
+		enterkey(13);
+		break;
+	case mouseup:
+		SetStatusMessage(L"speed up mouse");
+		speed++;
+		break;
+	case mousedown:
+		SetStatusMessage(L"slow  down mouse");
+		if (speed >1)
+		{
+			speed--;
+		}
+		
+		break;
+	case calibrate:
+		count = 0;
+		break;
+			
 	case NoAction:
 		break;
 	default:
 		break;
 	}
-	// different actions goes here
+	
 
 }
 void CSkeletonBasics::SetStatusMessage(WCHAR * szMessage)
@@ -1023,7 +1103,7 @@ void Movemouse(int x, int y, int Rsy, int Lsy)
 
 
 	// this is were we move the mouse based on the changes of the kinect we need to tweak
-	int speed = 3;
+	
 	int difx = x - centerX;
 	int dify = y - centerY;
 	if (difx >10)
@@ -1067,4 +1147,4 @@ void enterkey(char keyinput){
 
 	SendInput(1, &input, sizeof(INPUT));
 
-}
+}
