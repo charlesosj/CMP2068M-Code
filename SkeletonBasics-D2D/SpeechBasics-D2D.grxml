@@ -50,10 +50,15 @@
 	 <item> <tag>SPACE</tag> <one-of><item> space </item></one-of></item>
 	 <item> <tag>ENTER</tag> <one-of><item> enter </item></one-of></item>
 	 
-	 <item> <tag>CALIBRATE</tag> <one-of><item> recalibrate </item><item> calibrate </item></one-of></item>
+	 <item> <tag>CALIBRATE</tag> <one-of><item> recalibrate </item><item> calibrate </item><item> start mouse </item><item> reset </item></one-of></item>
 	 <item> <tag>MOUSEUP</tag> <one-of><item> speed up </item><item> fast </item><item> faster </item><item> speed up mouse </item></one-of></item>
 	 <item> <tag>MOUSEDOWN</tag> <one-of><item> slow down </item><item> slow </item><item> slower </item><item> slow down mouse </item></one-of></item>
 
+	 <item> <tag>CHROME</tag> <one-of><item> Launch chrome</item><item> open chrome</item><item> launch browser </item><item> open browser </item><item> give me internet </item></one-of></item>
+     <item> <tag>NOTEPAD</tag> <one-of><item> Launch notepad</item><item> open notepad </item><item> give me notepad </item></one-of></item>
+	 <item> <tag>CLOSEWINDOW</tag> <one-of><item> close window</item><item> alt ef four </item><item> destroy window </item></one-of></item>
+	 
+	 <item> <tag>BACKSPACE</tag> <one-of><item> back space</item><item> backspace </item><item> clear </item></one-of></item>
 	  
 	  <item>
         <tag>RIGHTCLICK</tag>

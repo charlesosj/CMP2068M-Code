@@ -1,20 +1,15 @@
-﻿Build started 07/04/2014 21:52:26.
+﻿Build started 08/04/2014 14:02:03.
      1>Project "C:\Users\Charles\Dropbox\GitHub\GroupProject\CMP2068M-Code\SkeletonBasics-D2D\SkeletonBasics-D2D.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt KinectAudioStream.cpp SkeletonBasics.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt SkeletonBasics.cpp
          SkeletonBasics.cpp
      1>c:\program files (x86)\microsoft sdks\speech\v11.0\include\sphelper.h(1235): warning C4996: 'GetVersionExW': was declared deprecated
                  c:\program files (x86)\windows kits\8.1\include\um\sysinfoapi.h(442) : see declaration of 'GetVersionExW'
+     1>c:\users\charles\dropbox\github\groupproject\cmp2068m-code\skeletonbasics-d2d\skeletonbasics.cpp(416): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
+     1>c:\users\charles\dropbox\github\groupproject\cmp2068m-code\skeletonbasics-d2d\skeletonbasics.cpp(417): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
      1>c:\users\charles\dropbox\github\groupproject\cmp2068m-code\skeletonbasics-d2d\skeletonbasics.cpp(418): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
      1>c:\users\charles\dropbox\github\groupproject\cmp2068m-code\skeletonbasics-d2d\skeletonbasics.cpp(419): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
-     1>c:\users\charles\dropbox\github\groupproject\cmp2068m-code\skeletonbasics-d2d\skeletonbasics.cpp(420): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
-     1>c:\users\charles\dropbox\github\groupproject\cmp2068m-code\skeletonbasics-d2d\skeletonbasics.cpp(421): warning C4244: 'initializing' : conversion from 'FLOAT' to 'int', possible loss of data
-         Generating Code...
-         Compiling...
-         KinectAudioStream.cpp
-     1>c:\program files (x86)\microsoft sdks\speech\v11.0\include\sphelper.h(1235): warning C4996: 'GetVersionExW': was declared deprecated
-                 c:\program files (x86)\windows kits\8.1\include\um\sysinfoapi.h(442) : see declaration of 'GetVersionExW'
-         Generating Code...
+     1>c:\users\charles\dropbox\github\groupproject\cmp2068m-code\skeletonbasics-d2d\skeletonbasics.cpp(422): warning C4554: '&' : check operator precedence for possible error; use parentheses to clarify precedence
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Charles\Dropbox\GitHub\GroupProject\CMP2068M-Code\SkeletonBasics-D2D\Debug\SkeletonBasics-D2D.exe" /INCREMENTAL /NOLOGO Msdmo.lib dmoguids.lib amstrmid.lib avrt.lib kernel32.lib user32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Kinect10.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Charles\Dropbox\GitHub\GroupProject\CMP2068M-Code\SkeletonBasics-D2D\Debug\SkeletonBasics-D2D.pdb" /SUBSYSTEM:WINDOWS /STACK:"10000000","10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Charles\Dropbox\GitHub\GroupProject\CMP2068M-Code\SkeletonBasics-D2D\Debug\SkeletonBasics-D2D.lib" /MACHINE:X86 Debug\SkeletonBasics.res
          Debug\KinectAudioStream.obj
@@ -24,4 +19,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.68
+Time Elapsed 00:00:01.94

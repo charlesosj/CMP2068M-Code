@@ -3,23 +3,21 @@
 //     Copyright (c) Microsoft Corporation.  All rights reserved.
 // </copyright>
 //------------------------------------------------------------------------------
-//remember to sort screen resolution
 #include "stdafx.h"
 #include "wtypes.h"
 #include <Windows.h>
-//#include <strsafe.h>
 #include "SkeletonBasics.h"
 #include "resource.h"
 #include "KinectAudioStream.h"
-//#include "SpeechBasics.h"
+
+#include <shellapi.h>
 #define INITGUID
 #include <guiddef.h>
 #include <strsafe.h>
 static const float g_JointThickness = 3.0f;
 static const float g_TrackedBoneThickness = 6.0f;
 static const float g_InferredBoneThickness = 1.0f;
-int speed = 3;
-int screenX = 0, screenY = 0;
+int speed = 3, screenX = 0, screenY = 0;
 int centerX = 0, centerY = 0, count = 0;
 int leftshoulderY = 0, rightshoulderY = 0;
 void Movemouse(int x, int y, int Rsy, int Lsy);
@@ -419,28 +417,22 @@ void CSkeletonBasics::ProcessSkeleton()
 			int y = skeletonFrame.SkeletonData[i].SkeletonPositions[NUI_SKELETON_POSITION_HEAD].y * 1000;
 			int Lsy = skeletonFrame.SkeletonData[i].SkeletonPositions[NUI_SKELETON_POSITION_SHOULDER_LEFT].y * 1000;
 			int Rsy = skeletonFrame.SkeletonData[i].SkeletonPositions[NUI_SKELETON_POSITION_SHOULDER_RIGHT].y * 1000;
-			if (count < 50)
+
+			
+			if (count >0 & count < 50)
 			{
 				centerX = x;
 				centerY = y;
 				leftshoulderY = Lsy;
 				rightshoulderY = Rsy;
 				count++;
-				SetStatusMessage(L" Calibrating Mouse, Stay still");
 
 			}
-			else
+			if (count >48)
 			{
-				SetStatusMessage(L" Mouse Calibrated");
-				Movemouse(x, y, Rsy, Lsy);
+					Movemouse(x, y, Rsy, Lsy);
 
 			}
-
-
-
-
-
-
 
 		}
 		else if (NUI_SKELETON_POSITION_ONLY == trackingState)
@@ -884,6 +876,10 @@ ProgramActions CSkeletonBasics::MapSpeechTagToAction(LPCWSTR pszSpeechTag)
 		{ L"MOUSEUP", mouseup },
 		{ L"MOUSEDOWN", mousedown },
 		{ L"CALIBRATE", calibrate },
+		{ L"CHROME", chrome },
+		{ L"NOTEPAD", notepad },
+		{ L"CLOSEWINDOW", closewindow },
+		{ L"BACKSPACE", backspace },
 
 	};
 
@@ -1078,7 +1074,22 @@ void CSkeletonBasics::DoAction(ProgramActions action)
 		
 		break;
 	case calibrate:
-		count = 0;
+		SetStatusMessage(L" Calibrating Mouse, Stay still");
+		count = 1;
+		break;
+	case chrome:
+		ShellExecuteA(0, 0, "chrome.exe", "http://google.com  --incognito", 0, SW_SHOWMAXIMIZED);
+		SetStatusMessage(L"Chrome Opening");
+		break;
+	case notepad:
+		ShellExecute(0, L"open", L"c:\\windows\\notepad.exe",NULL, 0, SW_SHOW);
+		SetStatusMessage(L"Notepad Opening");
+		break;
+	case closewindow:
+		SendMessage(GetForegroundWindow(), WM_CLOSE,NULL,NULL);
+		break;
+	case backspace:
+		enterkey(8);
 		break;
 			
 	case NoAction:
